@@ -17,7 +17,7 @@ const MainContent = () => {
                     </div>
                     <div className='content-image'>
                         <img 
-                            src="image/Abstract Background Depop Profile Picture (7).png"
+                            src="public\image\Abstract Background Depop Profile Picture (13).png"
                             alt="Avatar"  
                         />
                     </div>
