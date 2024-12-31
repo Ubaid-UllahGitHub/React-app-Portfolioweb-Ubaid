@@ -8,10 +8,10 @@ const MainContent = () => {
                 <div className='main-content'>
                     <div className='content'>
                         <h3>
-                            Ubaid Ullah Front-End Developer
+                            I'M Ubaid-Ullah
                         </h3>
                         <p>
-                            Hello! I am Ubaid Ullah. Welcome to my Portfolio Website. As a Front-End Developer,
+                            Hello! Welcome to my Portfolio Website. As a Front-End Developer,
                             I really like to craft and develop attractive and innovative designs.     
                         </p>
                     </div>

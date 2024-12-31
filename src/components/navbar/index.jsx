@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="inner-container">
         <div className="logo-contianer">
           <a href="#">
-            <img src="public/image/Abstract Background Depop Profile Picture (10).png" alt="web-logo" />
+            <img src="/image/Abstract Background Depop Profile Picture (10).png" alt="web-logo" />
           </a>
         </div>
         <div className="menu-icon" id="menuIcon">

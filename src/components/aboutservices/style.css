@@ -1,0 +1,175 @@
+body {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-services-section {
+    width: 100%;
+    background-color: #2a3038;
+    display: flex;
+    margin: 0;
+    padding: 40px 0;
+    align-items: center;
+}
+
+.inner-section {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+/* about me  */
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.about-me h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+
+.custom-hr {
+    flex-shrink: 0;
+    margin-top: 10px;
+    justify-content: flex-start;
+    width: 100px;
+    height: 2px;
+    background-color: #80ff00;
+    border: none;
+}
+
+.text p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+}
+.text p strong{
+    color: #66cc00;
+    font-weight: 400;
+}
+/* skill-boxes */
+.about-skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    padding: 0;
+    margin: 20px;
+}
+.about-skills h5{
+    font-size: 2rem;
+    color: white;
+    padding: 0;
+}
+.skill-icons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 25px;
+}
+.first-row, .second-row, .third-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 25px;
+}
+.first-row{
+    margin: auto;
+}
+.second-row{
+    margin: auto;
+}
+.third-row{
+    margin: auto;
+}
+.html-box {
+    flex: 1 1 calc(22% - 50px);
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+    border-radius: 15px;
+    background-color: #1c2028;
+    min-width: 200px;
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
+}
+.wp-box{
+    flex: 1 1 calc(22% - 50px);
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+    border-radius: 15px;
+    background-color: #1c2028;
+    min-width: 200px;
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
+}
+.box{
+    flex: 1 1 calc(22% - 50px);
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+    border-radius: 15px;
+    background-color: #1c2028;
+    min-width: 200px;
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
+}
+.wp-box:hover, .html-box:hover, .box:hover {
+    background-color: #99ff33;
+    transition: background 1s ease; /* Smooth transition for background */
+}
+.wp-box:hover h5, .html-box:hover h5, .box:hover h5 {
+    color: #000000; /* Set font color to black */
+    font-weight: 500;
+}
+
+.html-box h5, .wp-box h5, .box h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}

@@ -9,13 +9,12 @@ body {
 
 .outer-main {
     width: 100%;
-    /* background: linear-gradient(90deg, #1c2028 65%, #80ff00 40%); */
     background-color: #1c2028;
     display: flex;
     align-items: center;
-    padding: 50px 0 0 0;
+    padding-top: 50px;
     margin: -100px 0 0 0 ;
-    height: 550px;
+    height: 100vh;
 }
 
 .inner-main {
@@ -30,7 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 5%; /* Reduced gap */
+    gap: 20px; /* Reduced gap */
     align-items: center;
     flex-wrap: wrap;
     
@@ -40,18 +39,17 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: flex-start; 
-    flex: 1 1 50%; /* Allow this to shrink or grow */
+    flex: 1 1 35%; /* Allow this to shrink or grow */
     gap: 10px; 
     text-align: left;
 }
 
 .main-content .content h3 {
-    font-size: 3rem; 
+    font-size: clamp(30px, 4vw, 45px);
     font-weight: bold; 
     font-family: inherit;
     line-height: 1.2;
     margin: 0 0 ;
-    width: 400px;
     color: white; 
 }
 
@@ -62,14 +60,23 @@ body {
 }
 .main-content .content-image {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    flex: 1 1 40%; /* Allow this to shrink or grow */
-}
+    flex: 1 1 60%; /* Allow this to shrink or grow */
+    height: 100vh;
 
-.content-image img {
+}
+/* .content-image {
+    background-image: url('/image/Abstract Background Depop Profile Picture (14).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    filter: grayscale(100%);
     width: 100%;
+  } */
+.content-image img {
+    width: clamp(430px, 30vw, 900px);
     height: auto; 
-    max-width: 500px;
     object-fit: cover; 
 }
