@@ -9,6 +9,7 @@ const AboutServices = () => {
                         <h3>About Me</h3>
                         <div className="text">
                             <div className="custom-hr" >
+                                <div>-</div>
                             </div>
                             <p>
                                 I am a passionate and detail-oriented Front-End Developer with a strong foundation in web development technologies and a keen eye for design. With expertise in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Bootstrap</strong>, and <strong>React.js</strong>, I create responsive, user-friendly, and visually appealing websites tailored to client needs.
@@ -22,7 +23,7 @@ const AboutServices = () => {
                             <div className="first-row">
                                 <div className="html-box">
                                     <img
-                                        src="public/image/HTML5.png"
+                                        src="image/HTML5.png"
                                         alt="HTML"
                                         width="75px"
                                         height="75px"
@@ -33,7 +34,7 @@ const AboutServices = () => {
                                 </div>
                                 <div className="html-box">
                                     <img
-                                        src="public/image/css.png"
+                                        src="image/css.png"
                                         alt="css"
                                         width="100px"
                                     />
@@ -43,7 +44,7 @@ const AboutServices = () => {
                                 </div>
                                 <div className="html-box">
                                     <img
-                                        src="public/image/JavaScript.png"
+                                        src="image/JavaScript.png"
                                         alt="JavaScript"
                                          width="100px"
                                     />
@@ -65,7 +66,7 @@ const AboutServices = () => {
                             <div className="second-row">
                                 <div className="wp-box">
                                     <img
-                                    src="public\image\TailwindCss.png"
+                                    src="image/TailwindCss.png"
                                          width="100px"
                                         alt="Tailwind Css"
                                     />

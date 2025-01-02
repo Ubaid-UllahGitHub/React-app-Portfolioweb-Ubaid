@@ -14,6 +14,8 @@ body {
     margin: 0;
     padding: 40px 0;
     align-items: center;
+    position: relative;
+    z-index: 90; /* Lower than the upper section */
 }
 
 .inner-section {
@@ -44,36 +46,41 @@ body {
 }
 
 .about-me h3 {
-    font-size: 2rem;
+    font-size: clamp(30px, 4vw, 15px);
+    font-family: "Nanum Gothic Coding", monospace;
     margin-bottom: 10px;
     color: white;
 }
 .text {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    flex-wrap: wrap;
     align-items: start;
     gap: 15px;
 }
-
 .custom-hr {
-    flex-shrink: 0;
     margin-top: 10px;
-    justify-content: flex-start;
-    width: 100px;
+    flex: 0 0 clamp(100px, 20%, 200px); /* Initial width scales based on viewport */
     height: 2px;
-    background-color: #80ff00;
+    background-color: #99ff33;
     border: none;
 }
-
+@media (max-width: 500px) {
+    .custom-hr {
+        position: relative;
+        right: -2px;
+    }
+}
 .text p {
     margin: 0;
+    flex: 1 1 clamp(300px, 70%, 100%); /* Scales width dynamically */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: white;
 }
 .text p strong{
-    color: #66cc00;
+    color: #99ff33;
     font-weight: 400;
 }
 /* skill-boxes */
@@ -85,10 +92,11 @@ body {
     align-items: center;
     gap: 0px;
     padding: 0;
-    margin: 20px;
+    margin: 20px 0px 50px 0px;
 }
 .about-skills h5{
-    font-size: 2rem;
+    font-size:clamp(30px, 4vw, 15px);
+    font-family: "Nanum Gothic Coding", monospace;
     color: white;
     padding: 0;
 }
@@ -115,8 +123,8 @@ body {
     margin: auto;
 }
 .html-box {
-    flex: 1 1 calc(22% - 50px);
-    height: 200px;
+    flex: 1 1 calc(18% - 50px);
+    height: 180px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -124,14 +132,14 @@ body {
     justify-content: center;
     padding: 25px;
     gap: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #1c2028;
     min-width: 200px;
     box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
 }
 .wp-box{
     flex: 1 1 calc(22% - 50px);
-    height: 200px;
+    height: 180px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -139,14 +147,14 @@ body {
     justify-content: center;
     padding: 25px;
     gap: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #1c2028;
     min-width: 200px;
     box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
 }
 .box{
     flex: 1 1 calc(22% - 50px);
-    height: 200px;
+    height: 180px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -154,7 +162,7 @@ body {
     justify-content: center;
     padding: 25px;
     gap: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #1c2028;
     min-width: 200px;
     box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
@@ -170,6 +178,6 @@ body {
 
 .html-box h5, .wp-box h5, .box h5 {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
 }

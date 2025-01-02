@@ -13,8 +13,11 @@ body {
     display: flex;
     align-items: center;
     padding-top: 50px;
-    margin: -100px 0 0 0 ;
-    height: 100vh;
+    margin: -100px 0 0 0;
+    height: 700px;
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 95; /* Higher than the lower section */
 }
 
 .inner-main {
@@ -39,18 +42,23 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: flex-start; 
-    flex: 1 1 35%; /* Allow this to shrink or grow */
+    flex: 1 1 37%; /* Allow this to shrink or grow */
     gap: 10px; 
     text-align: left;
 }
 
 .main-content .content h3 {
-    font-size: clamp(30px, 4vw, 45px);
+    font-size: clamp(30px, 4vw, 15px);
     font-weight: bold; 
     font-family: inherit;
     line-height: 1.2;
     margin: 0 0 ;
     color: white; 
+}
+.main-content .content h3 span{
+    font-family: "Nanum Gothic Coding", monospace;
+    font-size: clamp(30px, 4vw, 55px);
+    color:#80ff00;
 }
 
 .main-content .content p {
@@ -58,13 +66,42 @@ body {
     line-height: 1.5; 
     color: white; 
 }
+.main-content .custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #80ff00; 
+    background-color: transparent;
+    border: 1px solid #80ff00; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.8s ease; 
+}
+
+.custom-button svg {
+    fill: #80ff00; 
+    transition: all 0.3s ease; 
+}
+
+.custom-button:hover {
+    background-color: #80ff00; 
+    color: #000; 
+    font-weight: 600;
+}
+.custom-button:hover svg {
+    fill: #000; 
+    transform: rotate(360deg); 
+}
+
 .main-content .content-image {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex: 1 1 60%; /* Allow this to shrink or grow */
-    height: 100vh;
-
 }
 /* .content-image {
     background-image: url('/image/Abstract Background Depop Profile Picture (14).png');
@@ -76,7 +113,7 @@ body {
     width: 100%;
   } */
 .content-image img {
-    width: clamp(430px, 30vw, 900px);
+    width: clamp(325px, 35vw, 790px);
     height: auto; 
     object-fit: cover; 
 }
