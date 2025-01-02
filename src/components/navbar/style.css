@@ -80,6 +80,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
+  gap: 17px;
   width: 100%;
 }
 
@@ -119,12 +120,10 @@ body {
   align-items: center;
   margin: 0px 15px;
 }
-
 .logo-menu-box img {
   width: 120px;
-  height: 120px;
-}
-
+  height: 40px;
+} 
 /* menu items */
 .menu-items {
   display: flex;
@@ -196,7 +195,8 @@ body {
 
 .follow-me {
   width: 100%;
-  margin: 15px;
+  margin-left: 15px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

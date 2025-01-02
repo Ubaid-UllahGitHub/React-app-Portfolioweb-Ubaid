@@ -68,6 +68,10 @@ html {
     line-height: 1.5; 
     color: white; 
 }
+.button-main{
+    display: flex;
+    gap: 20px;
+}
 .main-content .custom-button {
     display: flex;
     align-items: center;
@@ -98,6 +102,8 @@ html {
     fill: #000; 
     transform: rotate(360deg); 
 }
+
+
 
 .main-content .content-image {
     display: flex;
