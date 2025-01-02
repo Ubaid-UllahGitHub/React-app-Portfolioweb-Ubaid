@@ -2,9 +2,9 @@ import React from "react";
 import './style.css';
 const AboutServices = () => {
     return (
-        <services className='about-services-section'>
+        <services className='about-services-section' id="about">
             <div className="inner-section">
-                <div className="about">
+                <div className="about" >
                     <div className="about-me">
                         <h3>About Me</h3>
                         <div className="text">

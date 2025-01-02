@@ -15,7 +15,7 @@ const MainContent = () => {
                             I really like to craft and develop attractive and innovative designs.
                         </p>
                         <div className="button-main">
-                            <a href="https://example.com" className="custom-link">
+                            <a href="#services" className="custom-link">
                                 <button className="custom-button">
                                     Portfolio
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
