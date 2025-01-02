@@ -152,3 +152,27 @@ body {
     transform: rotate(360deg); /* Rotates the icon 360 degrees */
     fill: #000000;
 }
+
+
+/* content on image for active box */
+.portfolio-box.active-box .img-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* Text color for the overlay */
+    opacity: 1; /* Make content visible by default */
+    background-color: rgba(0, 0, 0, 0.2); /* Transparent background on default */
+    backdrop-filter: blur(2px); /* Adds a blurry effect */
+    padding: 10px;
+}
+.portfolio-box.active-box  {
+    background-color: rgba(0, 0, 0, 0.2); /* Ensure consistent background on hover */
+    cursor: pointer;
+}
