@@ -14,8 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 100px 0;
-    box-shadow: 0 -25px 30px rgba(0, 0, 0, 0.5), 0 25px 30px rgba(0, 0, 0, 0.5);
-
+    box-shadow:  0 25px 30px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 99;
 }

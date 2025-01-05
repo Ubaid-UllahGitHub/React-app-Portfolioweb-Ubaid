@@ -1,62 +1,71 @@
 body {
-  width: 100%;
-  font-family: urbanist;
-  background-color: rgb(255, 255, 255);
-  color: #000000;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    width: 100%;
+    font-family: urbanist;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.outer-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100px;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  z-index: 100;
+.menu-outer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 100;
 }
 
-.inner-container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  padding: 0;
+.menu-inner-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo-contianer {
-  display: flex;
-  justify-content: start;
+.menu-logo-contianer {
+    display: flex;
+    justify-content: start;
 }
 
-.logo-contianer img {
-  width: 100px;
-  height: 100px;
+.menu-logo-contianer img {
+    width: 100px;
+    height: 100px;
+}
+.custom-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #80ff00; 
+    background-color: transparent;
+    border: 1px solid #80ff00; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.8s ease; 
 }
 
-.menu-icon {
-  cursor: pointer;
+.custom-button2 svg {
+    fill: #80ff00; 
+    transition: all 0.3s ease; 
 }
 
-.menu-icon svg {
-  fill: #1c2028;
-  background-color: #80ff00;
-  padding: 9px;
-  border: 1px solid #80ff00;
-  border-radius: 100px;
-  width: 30px;
-  height: 30px;
-  transition: transform 0.5s ease, background-color 0.5s ease;
+.custom-button2:hover {
+    background-color: #80ff00; 
+    color: #000; 
+    font-weight: 600;
+    border: 1px solid #80ff00; 
 }
-
-.menu-icon svg:hover {
-  transform: rotate(360deg) scale(1.1);
+.custom-button2:hover svg {
+    fill: #000; 
+    transform: rotate(360deg); 
 }
 
 /* Menu side box */
@@ -236,4 +245,4 @@ body {
 
 .follow-me svg:hover {
   transform: rotate(360deg) scale(1.1);
-}
+}   

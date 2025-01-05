@@ -1,0 +1,217 @@
+body {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outer-container-experience {
+    width: 100%;
+    background-color: #1c2028;
+    display: flex;
+    border: none;
+    align-items: center;
+    padding: 150px 0px 50px 0px; 
+    margin: -100px 0 0 0;
+    position: relative;
+    z-index: 95; /* Higher than the lower section */
+}
+.inner-container-experience{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+.about-experience{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.experince-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.experince-heading .heading-icon{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 20px;
+}
+.experince-heading .heading-icon h3 {
+    font-size: clamp(30px, 4vw, 15px);
+    font-family: "Nanum Gothic Coding", monospace;
+    margin-bottom: 10px;
+    color: white;
+}
+.heading-icon svg {
+    fill: #99ff33; /* Primary green color */
+    width: 50px;
+    height: 50px;
+}
+
+.text {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 15px;
+}
+.custom-hr {
+    margin-top: 10px;
+    flex: 0 0 clamp(100px, 20%, 200px); /* Initial width scales based on viewport */
+    height: 2px;
+    background-color: #99ff33;
+    border: none;
+}
+@media (max-width: 500px) {
+    .custom-hr {
+        position: relative;
+        right: -2px;
+    }
+}
+/* my expeince */
+.experience {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #1c2028; /* Keep dark background for contrast */
+    padding: 30px 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Apply shadow on all sides */
+    color: white;
+}
+
+.company-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #99ff33; /* Green border for company info */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.name-designation h3 {
+    font-size: 1.5rem;
+    color: #99ff33; /* Green color for the job title */
+    margin: 0;
+}
+
+.name-designation h5 {
+    font-size: 1.1rem;
+    color: #ffffff; /* White color for company name */
+    font-weight: 400;
+    margin: 5px 0 0 0;
+}
+
+.duration {
+    font-size: 1rem;
+    color: #99ff33; /* Green color for duration */
+}
+
+.responsibilities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.responsibilities ul li {
+    font-size: 0.9rem;
+    color: #ffffff; /* White text for the responsibilities */
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.responsibilities ul li strong {
+    color: #99ff33; /* Green color for strong text */
+}
+
+.responsibilities ul li:hover {
+    background-color: #333c47; /* Dark hover effect */
+    padding-left: 10px; /* Adds a small padding on hover */
+    transition: all 0.3s ease;
+}
+
+/* @media (max-width: 768px) {
+    .experience {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name-designation h3, .name-designation h5, .duration {
+        font-size: 1.2rem;
+    }
+} */
+
+
+
+.dot1 {
+    width: 20px;
+    height: 20px;
+    background-color: #99ff33;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    right: 60px;
+    top: 38px;
+    box-shadow: 0 0 10px rgba(153, 255, 51, 0.8);
+    animation: glow 1.2s infinite alternate;
+}
+
+.dot1::before {
+    content: '';
+    position: absolute;
+    width: 1.1px;
+    height: 50vh;
+    background-color: white;
+    left: 53%;
+    top: 185%;
+    transform: translateX(-50%);
+}
+
+.dot2 {
+    width: 20px;
+    height: 20px;
+    background-color: #99ff33;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    right: 60px;
+    top: 38px;
+    box-shadow: 0 0 10px rgba(153, 255, 51, 0.8);
+    animation: glow 1.2s infinite alternate;
+}
+
+.dot2::before {
+    content: '';
+    position: absolute;
+    width: 1.1px;
+    height: 50vh;
+    background-color: white;
+    left: 53%;
+    top: 185%;
+    transform: translateX(-50%);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(153, 255, 51, 0.8), 0 0 15px rgba(153, 255, 51, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(153, 255, 51, 1), 0 0 30px rgba(153, 255, 51, 1);
+    }
+}

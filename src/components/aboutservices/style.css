@@ -83,6 +83,42 @@ body {
     color: #99ff33;
     font-weight: 400;
 }
+.button-main{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #80ff00; 
+    background-color: transparent;
+    border: 1px solid #80ff00; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.8s ease; 
+}
+
+.custom-button svg {
+    fill: #80ff00; 
+    transition: all 0.3s ease; 
+}
+
+.custom-button:hover {
+    background-color: #80ff00; 
+    color: #000; 
+    font-weight: 600;
+}
+.custom-button:hover svg {
+    fill: #000; 
+    transform: rotate(360deg); 
+}
+
 /* skill-boxes */
 .about-skills {
     width: 100%;
