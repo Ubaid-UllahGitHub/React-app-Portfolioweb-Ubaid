@@ -17,7 +17,7 @@ const AboutServices = () => {
                             </p>
                         </div>
                         <div className="button-main">
-                            <a href="#services" className="custom-link">
+                            <a href="/about" className="custom-link">
                                 <button className="custom-button">
                                     Learn More
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">

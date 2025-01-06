@@ -21,14 +21,23 @@ const MyExperience = () => {
                     <div className="experience">
                         {/* <!-- First Company Info --> */}
                         <div className="company-entry">
-                        <div className="dot1"></div>
+                            {/* <div className="dot1"></div> */}
                             <div className="company-info">
                                 <div className="name-designation">
-                                    <h3>FrontEnd Developer</h3>
-                                    <h5>Handtech Solution</h5>
-                                </div>
-                                <div className="duration">
-                                    2023-Present
+                                    <div className="icon-contianer">
+                                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                        </svg>
+                                    </div>
+                                    <div className="Company-Designation-duration">
+                                        <div className="Company-Designation">
+                                            <h3>FrontEnd Developer</h3>
+                                            <h5>Handtech Solution</h5>
+                                        </div>
+                                        <div className="duration">
+                                            2023-Present
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="responsibilities">
@@ -46,14 +55,23 @@ const MyExperience = () => {
 
                         {/* <!-- Second Company Info (Duplicate) --> */}
                         <div className="company-entry">
-                        <div className="dot2"></div>
+                            {/* <div className="dot1"></div> */}
                             <div className="company-info">
                                 <div className="name-designation">
-                                    <h3>FrontEnd Developer</h3>
-                                    <h5>Handtech Solution</h5>
-                                </div>
-                                <div className="duration">
-                                    2023-Present
+                                    <div className="icon-contianer">
+                                        <svg className="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                        </svg>
+                                    </div>
+                                    <div className="Company-Designation-duration">
+                                        <div className="Company-Designation">
+                                            <h3>FrontEnd Developer</h3>
+                                            <h5>Handtech Solution</h5>
+                                        </div>
+                                        <div className="duration">
+                                            2023-Present
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="responsibilities">
