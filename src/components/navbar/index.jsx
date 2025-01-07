@@ -31,9 +31,9 @@ const Navbar = () => {
     <header className="outer-container">
       <div className="inner-container">
         <div className="logo-contianer">
-          <a href="/">
+          <Link to="/">
             <img src="image/Abstract Background Depop Profile Picture (10).png" alt="web-logo" />
-          </a>
+          </Link>
         </div>
         <div className="menu-icon" id="menuIcon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e8eaed">
@@ -50,9 +50,9 @@ const Navbar = () => {
             </svg>
           </div>
           <div className="logo-menu-box">
-            <a href="/">
+            <Link to="/">
               <img src="image/Side bar logo.png" alt="web-logo" />
-            </a>
+            </Link>
           </div>
           <div className="menu-items">
             <ul>
