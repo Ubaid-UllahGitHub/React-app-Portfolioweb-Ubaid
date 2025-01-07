@@ -83,12 +83,14 @@ body {
     color: #99ff33;
     font-weight: 400;
 }
-.button-main{
+.button-about{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 50px;
 }
-.custom-button {
+
+.about-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,17 +106,19 @@ body {
     transition: all 0.8s ease; 
 }
 
-.custom-button svg {
+.about-button svg {
     fill: #80ff00; 
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-.custom-button:hover {
+.about-button:hover {
     background-color: #80ff00; 
     color: #000; 
     font-weight: 600;
+    border: 1px solid #99ff33;
 }
-.custom-button:hover svg {
+
+.about-button:hover svg {
     fill: #000; 
     transform: rotate(360deg); 
 }
