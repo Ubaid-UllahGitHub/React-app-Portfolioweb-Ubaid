@@ -95,7 +95,7 @@ body {
     color:#99ff33;
 }
 /* button on image */
-.button-link {
+.button-Link {
     display: inline-flex; 
     align-items: center; 
     text-decoration: none; 
@@ -108,22 +108,26 @@ body {
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
 }
-.button-link svg {
+
+.button-Link svg {
     margin-left: 10px; 
     fill: #99ff33;
     transition: transform 0.5s ease; 
 }
-.button-link:hover {
+
+.button-Link:hover {
     background-color: #99ff33; 
     color: black; /* Text color changes to white */
     border-color: #99ff33; /* Border color changes to green */
 }
-.button-link:hover svg {
+
+.button-Link:hover svg {
     transform: rotate(360deg); /* Rotates the icon 360 degrees */
     fill: #000000;
 }
+
 /* last div button */
-.portfolio-link {
+a.portfolio-Link-btn {
     display: inline-flex; 
     align-items: center; 
     text-decoration: none; 
@@ -136,22 +140,21 @@ body {
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
 }
-.portfolio-link svg {
+a.portfolio-Link-btn svg {
     margin-left: 10px; 
     fill: #99ff33;
     transition: transform 0.5s ease; 
 }
-.portfolio-link:hover {
+a.portfolio-Link-btn:hover {
     background-color: #99ff33; 
-    color: black; /* Text color changes to white */
-    border-color: #99ff33; /* Border color changes to green */
+    color: black; 
+    border-color: #99ff33; 
     font-weight: 600;
 }
-.portfolio-link:hover svg {
-    transform: rotate(360deg); /* Rotates the icon 360 degrees */
+a.portfolio-Link-btn:hover svg {
+    transform: rotate(360deg); 
     fill: #000000;
 }
-
 
 /* content on image for active box */
 .portfolio-box.active-box .img-content {
@@ -175,3 +178,5 @@ body {
     background-color: rgba(0, 0, 0, 0.2); /* Ensure consistent background on hover */
     cursor: pointer;
 }
+
+

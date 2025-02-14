@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route
-          path='/'
+          path="/"
           element={
             <>
               <Navbar />
@@ -28,7 +28,7 @@ const App = () => {
           }
         />
         <Route
-          path='/about'
+          path="/about"
           element={
             <>
               <NavbarExperience />

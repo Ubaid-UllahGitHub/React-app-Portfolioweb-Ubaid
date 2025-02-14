@@ -171,12 +171,12 @@ body {
     /* Green color for duration */
 }
 .Company-Designation h3 {
-    font-size: 1.5rem;
+    font-size: clamp(19px, 3vw, 2em);
     color: #99ff33;
     margin: 0;
 }
 .Company-Designation h5 {
-    font-size: 1.1rem;
+    font-size: clamp(13px, 3vw, 1.3em);
     color: #ffffff;
     /* White color for company name */
     font-weight: 400;
