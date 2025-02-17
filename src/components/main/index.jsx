@@ -2,7 +2,7 @@ import React from "react";
 import './style.css';
 
 const MainContent = () => {
-    return (
+    return ( 
         <main className='outer-main'>
             <div className='inner-main'>
                 <div className='main-content'>
@@ -23,7 +23,7 @@ const MainContent = () => {
                                     </svg>
                                 </button>
                             </a>
-                            <a href="image/Resume/Ubaid Ullah - WP + FrontEnd Developer.pdf" className="custom-link" download>
+                            <a href="image/Resume/Resume.pdf" className="custom-link" download>
                                 <button className="custom-button">
                                     Resume
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
