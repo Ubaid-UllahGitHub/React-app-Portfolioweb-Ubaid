@@ -9,7 +9,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setOpen(!open);
+    setOpen(!open);x
   };
   {/*Declaration of Array for menu items */ }
   const menuItems = [

@@ -7,6 +7,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 .portfolio-outer-sec {
     width: 100%;
     background-color: #1c2028;
@@ -14,10 +15,11 @@ body {
     align-items: center;
     justify-content: center;
     padding: 100px 0;
-    box-shadow:  0 25px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 99;
 }
+
 .portfolio-inner {
     width: 90%;
     margin: auto;
@@ -25,6 +27,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .portfoli-content {
     display: flex;
     flex-direction: column;
@@ -33,14 +36,16 @@ body {
     width: 100%;
     gap: 50px;
 }
+
 /* section heading */
-.portoflio-heading h3{
+.portoflio-heading h3 {
     font-size: clamp(30px, 4vw, 15px);
     font-family: "Nanum Gothic Coding", monospace;
     color: white;
     padding: 0;
     margin: 0;
 }
+
 /* portfolio boxes parent div */
 .portfolio-boxes {
     display: flex;
@@ -50,17 +55,20 @@ body {
     align-items: center;
     gap: 25px;
 }
+
 .portfolio-box {
     flex: 1 1 25%;
     min-width: 200px;
     height: 300px;
     position: relative;
 }
+
 .portfolio-box img {
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
+
 /* content on image  */
 .img-content {
     position: absolute;
@@ -72,87 +80,103 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    color: white; /* Text color for the overlay */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black background */
+    color: white;
+    /* Text color for the overlay */
     opacity: 0;
-    transition: opacity 0.5s ease, background-color 0.5s ease; /* Added smooth transition for background-color */
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+    /* Added smooth transition for background-color */
     padding: 10px;
 }
+
 .portfolio-box:hover .img-content {
-    opacity: 1; /* Show the overlay content on hover */
-    background-color: rgba(0, 0, 0, 0.2); /* Fully transparent background on hover */
-    backdrop-filter: blur(2px); /* Adds a blurry effect */
+    opacity: 1;
+    /* Show the overlay content on hover */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Fully transparent background on hover */
+    backdrop-filter: blur(2px);
+    /* Adds a blurry effect */
     cursor: pointer;
 }
-.img-content p{
-    text-align: center;  
+
+.img-content p {
+    text-align: center;
     font-weight: 400;
     font-size: 18px;
     margin-top: -15px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-.img-content p strong{
-    color:#99ff33;
+
+.img-content p strong {
+    color: #99ff33;
 }
+
 /* button on image */
 .button-Link {
-    display: inline-flex; 
-    align-items: center; 
-    text-decoration: none; 
-    background-color: transparent; 
-    color: #99ff33; 
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: #99ff33;
     border: 2px solid #99ff33;
-    padding: 10px 15px; 
-    border-radius: 5px; 
-    font-size: 15px; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 15px;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .button-Link svg {
-    margin-left: 10px; 
+    margin-left: 10px;
     fill: #99ff33;
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
 }
 
 .button-Link:hover {
-    background-color: #99ff33; 
-    color: black; /* Text color changes to white */
-    border-color: #99ff33; /* Border color changes to green */
+    background-color: #99ff33;
+    color: black;
+    /* Text color changes to white */
+    border-color: #99ff33;
+    /* Border color changes to green */
 }
 
 .button-Link:hover svg {
-    transform: rotate(360deg); /* Rotates the icon 360 degrees */
+    transform: rotate(360deg);
+    /* Rotates the icon 360 degrees */
     fill: #000000;
 }
 
 /* last div button */
 a.portfolio-Link-btn {
-    display: inline-flex; 
-    align-items: center; 
-    text-decoration: none; 
-    background-color: transparent; 
-    color: #99ff33; 
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: #99ff33;
     border: 2px solid #99ff33;
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    font-size: 17px; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 17px;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
+
 a.portfolio-Link-btn svg {
-    margin-left: 10px; 
+    margin-left: 10px;
     fill: #99ff33;
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
 }
+
 a.portfolio-Link-btn:hover {
-    background-color: #99ff33; 
-    color: black; 
-    border-color: #99ff33; 
+    background-color: #99ff33;
+    color: black;
+    border-color: #99ff33;
     font-weight: 600;
 }
+
 a.portfolio-Link-btn:hover svg {
-    transform: rotate(360deg); 
+    transform: rotate(360deg);
     fill: #000000;
 }
 
@@ -167,16 +191,21 @@ a.portfolio-Link-btn:hover svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    color: white; /* Text color for the overlay */
-    opacity: 1; /* Make content visible by default */
-    background-color: rgba(0, 0, 0, 0.2); /* Transparent background on default */
-    backdrop-filter: blur(2px); /* Adds a blurry effect */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black background */
+    color: white;
+    /* Text color for the overlay */
+    opacity: 1;
+    /* Make content visible by default */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Transparent background on default */
+    backdrop-filter: blur(2px);
+    /* Adds a blurry effect */
     padding: 10px;
 }
-.portfolio-box.active-box  {
-    background-color: rgba(0, 0, 0, 0.2); /* Ensure consistent background on hover */
+
+.portfolio-box.active-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Ensure consistent background on hover */
     cursor: pointer;
 }
-
-

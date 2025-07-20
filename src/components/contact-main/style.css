@@ -1,0 +1,50 @@
+body {
+    font-family: urbanist;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.main1 { 
+    width:100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+}
+.inner-main{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-image {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-content h2 {
+    font-family: "Nanum Gothic Coding", monospace;
+    font-size: 7vw;
+    margin: 0;
+}
+
+.main-content p {
+    font-size: 2vm; /* Fixed typo: 'vm' should be 'rem' or 'vw' for font size */
+}
+
+.main-image img {
+    width: 100px;   
+    padding-bottom: 60px;    
+}

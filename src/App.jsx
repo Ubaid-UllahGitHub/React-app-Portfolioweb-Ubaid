@@ -8,11 +8,196 @@ import ContactFormSection from './components/contactform';
 import ContactDetails from './components/contactdetails';
 import NavbarExperience from './components/navbarexperience';
 import MyExperience from './components/myexperience';
+import Portfolioprojects from './components/projects';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
+
+const projects = {
+  roofapp: {
+    title: "Roof Inspection App",
+    subtitle: "Streamlined reporting tool for professional roof inspectors. Built",
+    stack: "Built with React, MUI, AWS S3, and PDF generator with user authentication.",
+    stack1: "Technologies: React, MUI, AWS S3, PDF generator, User Authentication",
+    imagesrc: "/image/projectroof.png", // Replace with your actual image path
+    imagealt: "Roof Inspection App Screenshot",
+    description: `
+      I developed a powerful and user-friendly <strong>Roof Inspection Web Application</strong> tailored for professional inspectors. This app enables efficient capture of <strong>client details</strong>, <strong>roof images</strong>, and <strong>inspection observations</strong>. It supports evaluation of roofing materials such as <strong>shingles, metal, tile, and wood shakes</strong>—covering issues like wind or hail damage, structural concerns, and granule loss.
+      <br/><br/>
+      Inspectors can upload high-resolution photos with notes, record detailed findings, and automatically generate branded <strong>PDF reports</strong> for clients. The responsive interface ensures smooth use from desktop or tablet, improving both <strong>speed and accuracy</strong>. The app saves time, eliminates paperwork, and enhances client trust through <strong>clear, professional documentation</strong>.
+    `,
+    links: [
+      {
+        text: "Live Preview",
+        href: "http://roof-deployment.s3-website.us-east-2.amazonaws.com/", // Replace with actual link
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  foriio: {
+    title: "Foriio Portfolio Builder",
+    subtitle: "Create your portfolio in minutes — a must-have tool for all types of creators.",
+    stack: "Contributed to frontend development using React, React Router, Hooks, and MUI.",
+    stack1: "Technologies: React, React Router, Hooks, MUI",
+    imagesrc: "/image/forrio.png",
+    imagealt: "Foriio Project Screenshot",
+    description: `
+    I contributed to the development of <strong>Foriio</strong>, a portfolio creation platform trusted by over 200,000 creators. The project focused on delivering a seamless, intuitive experience for users ranging from designers and illustrators to videographers and VTubers.
+    <br/><br/>
+    Key contributions include implementing dynamic routing with <strong>React Router</strong>, building reusable components with <strong>React Hooks</strong>, and enhancing UI with <strong>MUI</strong>. I also worked on integrating responsive layouts, showcasing user works, and API-based features like uploading assets, managing portfolios, and creator benefits.
+    <br/><br/>
+    The platform allows creators to upload diverse file formats, organize works into categories, and present their portfolio professionally. It also includes business collaboration features and a commerce section for monetizing digital content.
+  `,
+    links: [
+      {
+        text: "Live Preview",
+        href: "https://www.foriio.com/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+
+  ventinove: {
+    title: "Ventinove",
+    subtitle: "Sleep Deep. Wake Glowing. Feel renewed—with radiance and restoration in every daily ritual.",
+    stack1: "Built with Shopify",
+    imagesrc: "/image/ventinove.png",
+    imagealt: "Ventinove Shopify Store",
+    description: `
+      VENTINOVE is a premium wellness brand offering a sleep and skin renewal supplement. The site communicates scientific formulation with consumer trust through clear benefits like deep sleep, hydration, collagen activation, and antioxidant protection. Designed to be elegant and modern, the layout highlights customer education, product comparison, and a clean user journey from homepage to checkout.
+    `,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://ventinove.co/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+
+  nutriworld: {
+    title: "Nutriworld",
+    subtitle: "Premium sports nutrition and supplements designed for performance, recovery, and muscle growth.",
+    stack1: "Built with Shopify",
+    imagesrc: "/image/nutrition.png",
+    imagealt: "Nutriworld Shopify Store",
+    description: `
+      Nutriworld delivers a wide range of high-quality fitness supplements including protein, creatine, pre-workouts, and vitamins. The site is focused on performance-based marketing, fast delivery, and product education. Each product is SEO-optimized and supported with trust-building labels like “Free Shipping,” “Next-Day Delivery,” and “100% Quality Guarantee.”
+    `,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://nutriworld.eu/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+
+  fitgirl: {
+    title: "FitGirl Nutrition",
+    subtitle: "Health & fitness products for women, formulated with science-backed ingredients and clear benefits.",
+    stack1: "Built with Shopify",
+    imagesrc: "/image/fitgirl.png",
+    imagealt: "FitGirl Shopify Store",
+    description: `
+      FitGirl Nutrition is tailored for modern active women, offering a variety of supplements like collagen, vitamins, EAA, and clear whey. The branding is bold yet feminine, and focuses on clean nutrition and daily wellness. Featuring product bundles, expert blogs, and customer testimonials, this store supports wellness, recovery, and glow-from-within aesthetics.
+    `,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://fitgirl-nutrition.com/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+
+  "Cd": {
+    title: "C&D Hair Care",
+    subtitle: "Refresh your roots. Rejuvenate your hair from the ground up with clean, conscious hair care.",
+    stack1: "Built with Shopify",
+    imagesrc: "/image/c&d.png",
+    imagealt: "C&D Hair Care Shopify Store",
+    description: `
+      C&D is a natural hair care brand focusing on cruelty-free, vegan, and non-toxic products. The Shopify storefront is minimal and eco-friendly in tone, emphasizing bundles, sustainability, and performance. It highlights clean design and communicates trust through ingredient transparency and an accessible layout.
+    `,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://canddhair.com",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  "ConstructionBootstrap": {
+    title: "Construction & Renovation Website",
+    subtitle: "Modern Bootstrap-based site for construction and renovation services.",
+    stack1: "Built with HTML, JavaScript, CSS & Bootstrap",
+    imagesrc: "/image/projectbootstrap.png",
+    imagealt: "Construction Bootstrap Website Screenshot",
+    description: `
+    A fully responsive website built with Bootstrap for showcasing construction, flooring, and renovation services. Includes service listings, project gallery, testimonials, contact info, and FAQ — designed for contractors, builders, and renovation businesses looking for a clean, professional web presence.
+  `,
+    links: [
+      {
+        text: "View Website",
+        href: "https://construction-bootstrap.netlify.app/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  "longevix": {
+    title: "Longevix",
+    subtitle: "Longevix is a cutting-edge health and wellness Ecommerce platform that empowers users to take control of their health.",
+    stack1: "Built with WordPress, WooCommerce, and Elementor",
+    imagesrc: "/image/longevix.png",
+    imagealt: "Longevix WordPress Website Screenshot",
+    description: "Longevix is a modern health and wellness eCommerce website built on WordPress and WooCommerce, designed to offer users an intuitive shopping experience. As the WordPress developer, I implemented custom UI design, integrated secure payment methods including Google Pay and Apple Pay, and developed a dynamic coupon system to boost conversions. The platform combines aesthetic appeal with functionality, ensuring a smooth and engaging user journey.",
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://longevix.co.uk/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ],
+  }
+};
+
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -35,8 +220,98 @@ const App = () => {
               <MyExperience />
               <PortfolioSection />
               <ContactFormSection />
-              <ContactDetails />  
-              
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectroof"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.roofapp} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectventinove"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.ventinove} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+
+        <Route
+          path="/projectnutriworld"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.nutriworld} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+
+        <Route
+          path="/projectfitgirl"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.fitgirl} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+
+        <Route
+          path="/projectcd"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.Cd} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectforiio"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.foriio} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectconstructionbootstrap"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.ConstructionBootstrap} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectlongevix"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.longevix} />
+              <ContactFormSection />
+              <ContactDetails />
             </>
           }
         />

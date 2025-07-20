@@ -24,11 +24,11 @@ const MyExperience = () => {
                             {/* <div className="dot1"></div> */}
                             <div className="company-info">
                                 <div className="name-designation">
-                                    <div className="icon-contianer">
+                                    {/* <div className="icon-contianer">
                                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                                             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                                         </svg>
-                                    </div>
+                                    </div> */}
                                     <div className="Company-Designation-duration">
                                         <div className="Company-Designation">
                                             <h3>FrontEnd Developer</h3>
@@ -42,14 +42,14 @@ const MyExperience = () => {
                             </div>
                             <div className="responsibilities">
                                 <ul>
-                                    <li>Developed responsive and interactive user interfaces using HTML, CSS, JavaScript, and React.js, ensuring seamless user experiences across devices and screen sizes.</li>
-                                    <li>Implemented dynamic, reusable components with React.js, optimizing performance and enhancing maintainability of complex front-end applications.</li>
-                                    <li>Collaborated with design teams to convert UI/UX designs into pixel-perfect, responsive layouts, ensuring consistency and high-quality visuals using CSS frameworks like Tailwind CSS and custom CSS.</li>
-                                    <li>Implemented dynamic, reusable components with React.js, optimizing performance and enhancing maintainability of complex front-end applications.</li>
-                                    <li>Applied custom CSS to enhance design aesthetics in WordPress websites, improve functionality, and tailor websites to meet specific client requirements.</li>
-                                    <li>Integrated WooCommerce and other eCommerce solutions, optimizing product pages, checkout processes, and payment gateways for a smooth and user-friendly shopping experience.</li>
-                                    <li>Migrated WordPress websites from various hosting environments, ensuring data integrity, minimal downtime, and improved website performance.</li>
+                                    <li>Developed responsive websites using HTML, CSS, JavaScript, and Bootstrap for clients across various industries including real estate, eCommerce, IT, and design services.</li>
+                                    <li>Built and maintained React.js applications, including an inspection platform, an eCommerce web app, and a coaching platform utilizing React Hooks, Routing, and State Management for scalable and maintainable solutions.</li>
+                                    <li>Focused on understanding client requirements to design and implement interactive user interfaces and ensure a smooth user experience across all devices.</li>
+                                    <li>Continued working on WordPress and Shopify development, including custom themes, Shopify Liquid programming, and third-party app integration.</li>
                                 </ul>
+                                <div>
+                                    <strong>Core Skills:</strong> Front-End Development · HTML · CSS · JavaScript · React.js · Wordpress Development · Elementor · shopify development · Shopify Liquid · Responsive Web Design · Web Development · Web Design
+                                </div>
                             </div>
                         </div>
 
@@ -58,32 +58,32 @@ const MyExperience = () => {
                             {/* <div className="dot1"></div> */}
                             <div className="company-info">
                                 <div className="name-designation">
-                                    <div className="icon-contianer">
-                                        <svg className="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                    {/* <div className="icon-contianer">
+                                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                                             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                                         </svg>
-                                    </div>
+                                    </div> */}
                                     <div className="Company-Designation-duration">
                                         <div className="Company-Designation">
-                                            <h3>FrontEnd Developer</h3>
+                                            <h3>CMS Developer</h3>
                                             <h5>Handtech Solution</h5>
                                         </div>
                                         <div className="duration">
-                                            2023-Present
+                                            2022-2023
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="responsibilities">
                                 <ul>
-                                    <li>Developed responsive and interactive user interfaces using HTML, CSS, JavaScript, and React.js, ensuring seamless user experiences across devices and screen sizes.</li>
-                                    <li>Implemented dynamic, reusable components with React.js, optimizing performance and enhancing maintainability of complex front-end applications.</li>
-                                    <li>Collaborated with design teams to convert UI/UX designs into pixel-perfect, responsive layouts, ensuring consistency and high-quality visuals using CSS frameworks like Tailwind CSS and custom CSS.</li>
-                                    <li>Implemented dynamic, reusable components with React.js, optimizing performance and enhancing maintainability of complex front-end applications.</li>
-                                    <li>Applied custom CSS to enhance design aesthetics in WordPress websites, improve functionality, and tailor websites to meet specific client requirements.</li>
-                                    <li>Integrated WooCommerce and other eCommerce solutions, optimizing product pages, checkout processes, and payment gateways for a smooth and user-friendly shopping experience.</li>
-                                    <li>Migrated WordPress websites from various hosting environments, ensuring data integrity, minimal downtime, and improved website performance.</li>
+                                    <li>Developed WordPress websites using builders like Elementor, WPBakery, Beaver Builder, and Divi; gathered client requirements to create tailored solutions, customized themes, and integrated third-party plugins for enhanced functionality.</li>
+                                    <li> Built end-to-end eCommerce solutions with WooCommerce, including payment gateway setup, shipping method configuration, live shipping rate integration, and print label automation—delivering seamless, conversion-focused user experiences.</li>
+                                    <li> Worked on Shopify website development, creating interactive and brand-aligned storefronts using custom themes; implemented payment gateways, dynamic sections, and UI & UX enhancements. </li>
+                                    <li>Utilized HTML, CSS, JavaScript, and Shopify Liquid to develop custom features and sections, enhancing functionality and design beyond default theme capabilities in both WordPress and Shopify projects.</li>
                                 </ul>
+                                <div>
+                                    <strong>Core Skills:</strong> Wordpress Development · Theme Development · Shopify Liquid · Elementor · beaver · Shopify · HTML · CSS · JavaScript · Front-End Development · Payment Gateways · basic seo · E-Commerce
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,8 @@ body {
     padding: 40px 0;
     align-items: center;
     position: relative;
-    z-index: 90; /* Lower than the upper section */
+    z-index: 90;
+    /* Lower than the upper section */
 }
 
 .inner-section {
@@ -37,6 +38,7 @@ body {
     margin: 0;
     gap: 20px;
 }
+
 /* about me  */
 .about-me {
     display: flex;
@@ -51,6 +53,7 @@ body {
     margin-bottom: 10px;
     color: white;
 }
+
 .text {
     display: flex;
     justify-content: start;
@@ -58,37 +61,45 @@ body {
     align-items: start;
     gap: 15px;
 }
+
 .custom-hr {
     margin-top: 10px;
-    flex: 0 0 clamp(100px, 20%, 200px); /* Initial width scales based on viewport */
+    flex: 0 0 clamp(100px, 20%, 200px);
+    /* Initial width scales based on viewport */
     height: 2px;
     background-color: #99ff33;
     border: none;
 }
+
 @media (max-width: 500px) {
     .custom-hr {
         position: relative;
         right: -2px;
     }
 }
+
 .text p {
     margin: 0;
-    flex: 1 1 clamp(300px, 70%, 100%); /* Scales width dynamically */
+    flex: 1 1 clamp(300px, 70%, 100%);
+    /* Scales width dynamically */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: white;
 }
-.text p strong{
+
+.text p strong {
     color: #99ff33;
     font-weight: 400;
 }
-.button-about{
+
+.button-about {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
+
 .about-button {
     display: flex;
     align-items: center;
@@ -97,29 +108,29 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 400;
-    color: #80ff00; 
+    color: #80ff00;
     background-color: transparent;
-    border: 1px solid #80ff00; 
+    border: 1px solid #80ff00;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.8s ease; 
+    transition: all 0.8s ease;
 }
 
 .about-button svg {
-    fill: #80ff00; 
+    fill: #80ff00;
     transition: all 0.3s ease;
 }
 
 .about-button:hover {
-    background-color: #80ff00; 
-    color: #000; 
+    background-color: #80ff00;
+    color: #000;
     font-weight: 600;
     border: 1px solid #99ff33;
 }
 
 .about-button:hover svg {
-    fill: #000; 
-    transform: rotate(360deg); 
+    fill: #000;
+    transform: rotate(360deg);
 }
 
 /* skill-boxes */
@@ -133,34 +144,34 @@ body {
     padding: 0;
     margin: 20px 0px 50px 0px;
 }
-.about-skills h5{
-    font-size:clamp(30px, 4vw, 15px);
+
+.about-skills h5 {
+    font-size: clamp(30px, 4vw, 15px);
     font-family: "Nanum Gothic Coding", monospace;
     color: white;
     padding: 0;
 }
+
 .skill-icons {
     width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     gap: 25px;
 }
-.first-row, .second-row, .third-row{
+
+.first-row,
+.second-row,
+.third-row,
+.fourth-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     gap: 25px;
-}
-.first-row{
     margin: auto;
 }
-.second-row{
-    margin: auto;
-}
-.third-row{
-    margin: auto;
-}
+
 .html-box {
     flex: 1 1 calc(18% - 50px);
     height: 180px;
@@ -174,9 +185,11 @@ body {
     border-radius: 10px;
     background-color: #1c2028;
     min-width: 200px;
-    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1);
+    /* Softer, lighter shadow */
 }
-.wp-box{
+
+.wp-box {
     flex: 1 1 calc(22% - 50px);
     height: 180px;
     text-align: center;
@@ -189,9 +202,11 @@ body {
     border-radius: 10px;
     background-color: #1c2028;
     min-width: 200px;
-    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1);
+    /* Softer, lighter shadow */
 }
-.box{
+
+.box {
     flex: 1 1 calc(22% - 50px);
     height: 180px;
     text-align: center;
@@ -204,9 +219,28 @@ body {
     border-radius: 10px;
     background-color: #1c2028;
     min-width: 200px;
-    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1);
+    /* Softer, lighter shadow */
 }
-.html-box.active-box{
+
+.shopify-box {
+    flex: 1 1 calc(22% - 50px);
+    height: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: #1c2028;
+    min-width: 200px;
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1);
+    /* Softer, lighter shadow */
+}
+
+.html-box.active-box {
     flex: 1 1 calc(18% - 50px);
     height: 180px;
     text-align: center;
@@ -219,25 +253,93 @@ body {
     border-radius: 10px;
     background-color: #1c2028;
     min-width: 200px;
-    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1); /* Softer, lighter shadow */
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1);
+    /* Softer, lighter shadow */
 }
+
 .html-box.active-box {
     background-color: #99ff33;
 }
-.html-box.active-box h5{
-    color: black;   
+
+.html-box.active-box h5 {
+    color: black;
 }
-.wp-box:hover, .html-box:hover, .box:hover {
+
+.wp-box:hover,
+.html-box:hover,
+.box:hover {
     background-color: #99ff33;
-    transition: background 1s ease; /* Smooth transition for background */
+    transition: background 1s ease;
+    /* Smooth transition for background */
 }
-.wp-box:hover h5, .html-box:hover h5, .box:hover h5 {
-    color: #000000; /* Set font color to black */
+
+.wp-box:hover h5,
+.html-box:hover h5,
+.box:hover h5 .shopify-box:hover h5 {
+    color: #000000;
+    /* Set font color to black */
     font-weight: 500;
 }
 
-.html-box h5, .wp-box h5, .box h5 {
+.html-box h5,
+.wp-box h5,
+.box h5,
+.shopify-box h5 {
     margin: 0;
     font-size: 18px;
     font-weight: 500;
+}
+
+.tech-skill-wrapper {
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tech-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech-box {
+    height: 180px;
+    min-width: 200px;
+    background-color: #1c2028;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 20px;
+    transition: background 1s ease;
+    cursor: default;
+    text-align: center;
+}
+
+.tech-box:hover {
+    background-color: #99ff33;
+}
+
+.tech-box p {
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.tech-box:hover p {
+    color: black;
+    font-weight: 600;
+}
+
+.tech-img {
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(1);
 }
