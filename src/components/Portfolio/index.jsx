@@ -1,6 +1,9 @@
-import { Box, Container, Typography, Button, Grid, Card, CardMedia, CardContent } from "@mui/material";
+import { Box, Container, Button, Grid, Typography, Chip, Card, CardMedia, CardContent } from "@mui/material";
+import { Tabs, Tab } from "@mui/material";
+
 import { Link } from "react-router-dom";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import React, { useState } from 'react';
 
 const customButtonStyle = {
     display: 'flex',
@@ -102,9 +105,35 @@ const Portfolio = () => {
             tech: "WordPress, Elementor, WooCommerce",
             route: "/projectlongevix",
         },
+        {
+            id: 9,
+            title: "Shopify-Conatatural",
+            image: "/image/conatural.png",
+            category: "Shopify",
+            tech: "Shopify, Custom Theme, Stripe",
+            route: "/projectconatural",
+        },
+        {
+            id: 10,
+            title: "Shopify - Vivanmn",
+            image: "/image/vivanum.png",
+            category: "Shopify",
+            tech: "Shopify, Custom Theme, Stripe",
+            route: "/projectvivanmn",
+        },
+        {
+            id: 11,
+            title: "Shopify - Feals",
+            image: "/image/fleas.png",
+            category: "Shopify",
+            tech: "Shopify, Custom Theme, Stripe",
+            route: "/projectfeals",
+        },
     ];
+    const [selectedCategory, setSelectedCategory] = useState('All');
 
     return (
+
         <Box
             id="services"
             sx={{
@@ -141,105 +170,182 @@ const Portfolio = () => {
                         MY PORTFOLIO
                     </Typography>
 
+                    <Box sx={{ width: '100%' }}>
+                        <Tabs
+                            value={selectedCategory}
+                            onChange={(e, newValue) => setSelectedCategory(newValue)}
+                            variant="scrollable"
+                            scrollButtons="auto"
+                            textColor="inherit"
+                            indicatorColor="secondary"
+                            disableRipple
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                flexWrap: 'wrap',
+                                '& button': {
+                                    color: 'white !important',
+                                    fontWeight: 500,
+                                    textTransform: 'capitalize',
+                                    fontSize: 16,
+                                    fontFamily: "'Urbanist', sans-serif",
+                                    mx: 1,
+                                },
+                                '& .Mui-selected': {
+                                    color: 'black !important',
+                                },
+                                '& .MuiTabs-indicator': {
+                                    backgroundColor: '#99ff33',
+                                },
+                            }}
+                        >
+                            {['All', 'React', 'Bootstrap', 'WordPress', 'Shopify'].map((category) => (
+                                <Tab
+                                    key={category}
+                                    label={category}
+                                    value={category}
+                                    variant="scrollable"
+                                    scrollButtons="auto"
+                                    disableRipple
+                                    disableFocusRipple
+
+                                    sx={{
+                                        fontSize: '16px',
+                                        fontWeight: 400,
+                                        fontFamily: 'Urbanist, sans-serif',
+                                        textTransform: 'capitalize',
+                                        color: '#fff',
+                                        backgroundColor: selectedCategory === category ? '#80ff00' : '#25252579',
+                                        border: selectedCategory === category ? '2px solid transparent' : '2px solid #80ff00',
+                                        borderRadius: '5px',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.4s ease',
+                                        minHeight: 'auto',
+                                        px: 2.5,
+                                        py: 1,
+                                        outline: 'none', // extra safe
+                                        '&.Mui-selected': {
+                                            outline: 'none',
+                                            boxShadow: 'none',
+                                        },
+                                        '&.Mui-focusVisible': {
+                                            outline: 'none !important',
+                                            boxShadow: 'none !important',
+                                        },
+                                        '&:hover': {
+                                            backgroundColor: '#80ff00',
+                                            color: '#fff',
+                                            border: '2px solid transparent',
+                                            outline: 'none !important',
+                                            boxShadow: 'none !important',
+                                        },
+                                    }}
+                                />
+                            ))}
+                        </Tabs>
+                    </Box>
+
                     <Grid
                         container
-                        spacing={3}
+                        spacing={2}
                         justifyContent="center"
                         alignItems="center"
                     >
-                        {projects.map((project, index) => (
-                            <Grid item xs={12} sm={6} md={4} key={project.id}>
-                                <Box
-                                    sx={{
-                                        position: "relative",
-                                        height: 300,
-                                        overflow: "hidden",
-                                        borderRadius: 1.5,
-                                        "&:hover .overlay": {
-                                            opacity: 1,
-                                            backgroundColor: "rgba(0,0,0,0.2)",
-                                            backdropFilter: "blur(2px)",
-                                            cursor: "pointer",
-                                        },
-                                    }}>
+                        {projects
+                            .filter(project => selectedCategory === "All" || project.category === selectedCategory)
+                            .map((project, index) => (
+                                <Grid item xs={12} sm={6} md={4} key={project.id}>
                                     <Box
-                                        component="img"
-                                        src={project.image}
-                                        alt={project.title}
                                         sx={{
-                                            width: "100%",
-                                            height: "100%",
-                                            objectFit: "cover",
-                                        }}
-                                    />
-                                    <Box
-                                        className="overlay"
-                                        sx={{
-                                            position: "absolute",
-                                            top: 0,
-                                            left: 0,
-                                            right: 0,
-                                            bottom: 0,
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                            backgroundColor: index === 0 ? "rgba(0,0,0,0.2)" : "rgba(0,0,0,0.7)",
-                                            color: "#fff",
-                                            opacity: index === 0 ? 1 : 0,
-                                            transition: "all 0.5s ease",
-                                            px: 2,
-                                        }}
-                                    >
-                                        <Typography
-                                            variant="body1"
+                                            position: "relative",
+                                            height: 300,
+                                            overflow: "hidden",
+                                            borderRadius: 1.5,
+                                            "&:hover .overlay": {
+                                                opacity: 1,
+                                                backgroundColor: "rgba(0,0,0,0.2)",
+                                                backdropFilter: "blur(2px)",
+                                                cursor: "pointer",
+                                            },
+                                        }}>
+                                        <Box
+                                            component="img"
+                                            src={project.image}
+                                            alt={project.title}
                                             sx={{
-                                                fontWeight: 400,
-                                                fontSize: 18,
-                                                textAlign: "center",
-                                                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)",
-                                                fontFamily: "'Urbanist', sans-serif",
-                                                mt: -2,
-                                            }}>
-                                            <Box component="strong" sx={{ color: "#99ff33" }}>
-                                                {project.title}
-                                            </Box>
-                                            , ({project.tech})
-                                        </Typography>
-
-                                        <Button
-                                            component={Link}
-                                            to={project.route}
-                                            variant="outlined"
-                                            sx={{
-                                                ...customButtonStyle,
+                                                width: "100%",
+                                                height: "100%",
+                                                objectFit: "cover",
                                             }}
-                                            // sx={{
-                                            //     mt: 2,
-                                            //     borderColor: "#99ff33",
-                                            //     color: "#99ff33",
-                                            //     fontSize: 15,
-                                            //     fontWeight: 500,
-                                            //     px: 2.5,
-                                            //     py: 1,
-                                            //     borderRadius: "5px",
-                                            //     textTransform: "none",
-                                            //     transition: "all 0.3s ease",
-                                            //     "&:hover": {
-                                            //         backgroundColor: "#99ff33",
-                                            //         color: "#000",
-                                            //         borderColor: "#99ff33",
-                                            //         svg: { transform: "rotate(360deg)", fill: "#000" },
-                                            //     },
-                                            // }}
-                                            endIcon={<OpenInNewIcon sx={{ ml: 1, fill: "#99ff33", transition: "transform 0.5s ease" }} />}
+                                        />
+                                        <Box
+                                            className="overlay"
+                                            sx={{
+                                                position: "absolute",
+                                                top: 0,
+                                                left: 0,
+                                                right: 0,
+                                                bottom: 0,
+                                                display: "flex",
+                                                flexDirection: "column",
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                                backgroundColor: index === 0 ? "rgba(0,0,0,0.2)" : "rgba(0,0,0,0.7)",
+                                                color: "#fff",
+                                                opacity: index === 0 ? 1 : 0,
+                                                transition: "all 0.5s ease",
+                                                px: 2,
+                                            }}
                                         >
-                                            Learn More
-                                        </Button>
+                                            <Typography
+                                                variant="body1"
+                                                sx={{
+                                                    fontWeight: 400,
+                                                    fontSize: 18,
+                                                    textAlign: "center",
+                                                    textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)",
+                                                    fontFamily: "'Urbanist', sans-serif",
+                                                    mt: -2,
+                                                }}>
+                                                <Box component="strong" sx={{ color: "#99ff33" }}>
+                                                    {project.title}
+                                                </Box>
+                                                , ({project.tech})
+                                            </Typography>
+
+                                            <Button
+                                                component={Link}
+                                                to={project.route}
+                                                variant="outlined"
+                                                sx={{
+                                                    ...customButtonStyle,
+                                                }}
+                                                // sx={{
+                                                //     mt: 2,
+                                                //     borderColor: "#99ff33",
+                                                //     color: "#99ff33",
+                                                //     fontSize: 15,
+                                                //     fontWeight: 500,
+                                                //     px: 2.5,
+                                                //     py: 1,
+                                                //     borderRadius: "5px",
+                                                //     textTransform: "none",
+                                                //     transition: "all 0.3s ease",
+                                                //     "&:hover": {
+                                                //         backgroundColor: "#99ff33",
+                                                //         color: "#000",
+                                                //         borderColor: "#99ff33",
+                                                //         svg: { transform: "rotate(360deg)", fill: "#000" },
+                                                //     },
+                                                // }}
+                                                endIcon={<OpenInNewIcon sx={{ ml: 1, fill: "#99ff33", transition: "transform 0.5s ease" }} />}
+                                            >
+                                                Learn More
+                                            </Button>
+                                        </Box>
                                     </Box>
-                                </Box>
-                            </Grid>
-                        ))}
+                                </Grid>
+                            ))}
                     </Grid>
 
                     <Box mt={4}>

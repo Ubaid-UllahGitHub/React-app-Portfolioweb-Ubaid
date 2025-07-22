@@ -35,7 +35,7 @@ const customButtonStyle = {
 };
 
 
-const Portfolioprojects = ({ title, subtitle, imagesrc, imagealt, description, links, stack, stack1 }) => {
+const Portfolioprojects = ({ title, subtitle, imagesrc, imagealt, description, links, stack1 }) => {
     return (
         <Box sx={{
             width: "100%",

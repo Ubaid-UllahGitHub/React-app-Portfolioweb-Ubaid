@@ -190,7 +190,70 @@ const projects = {
         )
       }
     ],
-  }
+  },
+  feals: {
+    title: "Feals",
+    subtitle: "CBD + THC microdosed gummies for better sleep, less stress, and daily calm—without the high.",
+    stack1: "Built with Shopify",
+    imagesrc: "/image/fleas.png", // Replace with actual image path
+    imagealt: "Feals Shopify Store",
+    description: `
+    Feals is a U.S.-based wellness brand offering science-backed CBD + THC products like sleep gummies and mints. Built on Shopify with custom Liquid development, the store delivers a trust-first experience with triple-tested ingredients, organic certification, and educational tools like interactive product quizzes. Features include subscription-ready shopping, nationwide shipping, and 30-day money-back guarantees. With bold branding, calming UI, and embedded social proof, the platform supports effortless shopping for over 350,000 customers seeking a healthier way to relax and sleep naturally.
+  `,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://feals.com",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  conatural: {
+    title: "Conatural",
+    subtitle: "Organic skincare made in Pakistan—clean, halal-certified beauty for every skin type and ritual.",
+    stack1: "Built with Shopify",
+    imagesrc: "/image/conatural.png", // Replace with actual image path
+    imagealt: "Conatural Shopify Store",
+    description: `
+    Conatural is Pakistan’s leading organic beauty and personal care brand, offering a wide range of halal-certified, paraben-free, and cruelty-free products. The Shopify store features advanced theme customization using Liquid, with clear product categorization, bundles, and dynamic sections like clearance sales and salon kits. The platform integrates powerful review systems, user testimonials, and educational blog content to drive customer trust. With mobile-first design, loyalty features, and secure checkout via Visa, MasterCard, Apple Pay, and Google Pay, Conatural delivers a seamless eCommerce experience to a diverse audience across Pakistan and beyond.
+  `,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://conaturalintl.com",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  vivanmn: {
+    title: "VIVANMN",
+    subtitle: "Supercharge your cellular health with UK-made NMN supplements—backed by science, built on trust.",
+    stack1: "Built with Shopify",
+    imagesrc: "/image/vivanum.png", // Replace with actual image path
+    imagealt: "VIVANMN Shopify Store",
+    description: `
+    VIVANMN is a wellness brand focused on longevity and energy through premium NMN supplements. The Shopify store is designed with a clean, science-first layout using custom Liquid templates for optimized product storytelling and trust-building. It features dynamic landing pages, third-party lab results, and compelling customer education. The Skio app powers subscription plans, enabling recurring monthly purchases. Checkout includes support for Visa, MasterCard, Apple Pay, Google Pay, and American Express. With a 100-day money-back guarantee, local UK production, and free express shipping, the site delivers a frictionless, high-converting eCommerce experience for health-conscious consumers.
+  `,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://vivanmn.com",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
 };
 
 
@@ -310,6 +373,39 @@ const App = () => {
             <>
               <Navbar />
               <Portfolioprojects {...projects.longevix} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectfeals"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.feals} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectconatural"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.conatural} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectvivanmn"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.vivanmn} />
               <ContactFormSection />
               <ContactDetails />
             </>
