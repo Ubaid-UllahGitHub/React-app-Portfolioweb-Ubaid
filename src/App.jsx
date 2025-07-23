@@ -191,6 +191,26 @@ const projects = {
       }
     ],
   },
+  "hts": {
+    title: "HTS - Handtech Solution",
+    subtitle: "Handtech Solution (HTS) is a modern tech agency delivering tailored digital solutions—from sleek websites to full-scale web & mobile apps.",
+    stack1: "Built with React.js, SCSS, and SMTP integration",
+    imagesrc: "/image/HTS.png",
+    imagealt: "HTS Tech Agency Website Screenshot",
+    description: "HTS (Handtech Solution) is a dynamic agency website crafted using React.js with a focus on interactive design and responsive performance. The platform showcases key offerings like web development, software engineering, UI/UX design, and application development. I developed a portfolio section with category filtering, a services page with smooth hover animations, and integrated a secure contact form with SMTP functionality using Nodemailer. Designed with SCSS and Urbanist font, the site balances professional aesthetics with functional user flow.",
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://handtechsolution.com", // Replace with actual live link
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+
   feals: {
     title: "Feals",
     subtitle: "CBD + THC microdosed gummies for better sleep, less stress, and daily calm—without the high.",
@@ -406,6 +426,17 @@ const App = () => {
             <>
               <Navbar />
               <Portfolioprojects {...projects.vivanmn} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projecthts"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.hts} />
               <ContactFormSection />
               <ContactDetails />
             </>

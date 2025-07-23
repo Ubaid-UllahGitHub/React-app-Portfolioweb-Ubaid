@@ -129,6 +129,14 @@ const Portfolio = () => {
             tech: "Shopify, Custom Theme, Stripe",
             route: "/projectfeals",
         },
+        {
+            id: 12,
+            title: "WordPress - HandTech Solutions",
+            image: "/image/HTS.png",
+            category: "WordPress",
+            tech: "WordPress, Elementor, HTML, CSS, JavaScript",
+            route: "/projecthts",
+        },
     ];
     const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -247,10 +255,9 @@ const Portfolio = () => {
 
                     <Grid
                         container
-                        spacing={2}
+                        spacing={1}
                         justifyContent="center"
-                        alignItems="center"
-                    >
+                        alignItems="center">
                         {projects
                             .filter(project => selectedCategory === "All" || project.category === selectedCategory)
                             .map((project, index) => (
