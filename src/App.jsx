@@ -194,7 +194,7 @@ const projects = {
   "hts": {
     title: "HTS - Handtech Solution",
     subtitle: "Handtech Solution (HTS) is a modern tech agency delivering tailored digital solutions—from sleek websites to full-scale web & mobile apps.",
-    stack1: "Built with React.js, SCSS, and SMTP integration",
+    stack1: "WordPress Development, HTML, CSS, JS and SMTP integration",
     imagesrc: "/image/HTS.png",
     imagealt: "HTS Tech Agency Website Screenshot",
     description: "HTS (Handtech Solution) is a dynamic agency website crafted using React.js with a focus on interactive design and responsive performance. The platform showcases key offerings like web development, software engineering, UI/UX design, and application development. I developed a portfolio section with category filtering, a services page with smooth hover animations, and integrated a secure contact form with SMTP functionality using Nodemailer. Designed with SCSS and Urbanist font, the site balances professional aesthetics with functional user flow.",
