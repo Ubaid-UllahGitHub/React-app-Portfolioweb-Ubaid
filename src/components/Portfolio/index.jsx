@@ -137,6 +137,38 @@ const Portfolio = () => {
             tech: "WordPress, Elementor, HTML, CSS, JavaScript",
             route: "/projecthts",
         },
+        {
+            id: 13,
+            title: "WordPress - ZechConsulting",
+            image: "/image/ztech.png",
+            category: "WordPress",
+            tech: "WordPress, Elementor, HTML, CSS, JavaScript, SMTP Integration",
+            route: "/projectzhconsultancy",
+        },
+        {
+            id: 14,
+            title: "WordPress - Mariot Store",
+            image: "/image/mariostore.png",
+            category: "WordPress",
+            tech: "WordPress, WooCommerce, Elementor, WhatsApp Integration, Payment Gateway",
+            route: "/projectmariotstore",
+        },
+        {
+            id: 15,
+            title: "React App - Cryprovest",
+            image: "/image/cryptovest.png",
+            category: "React",
+            tech: "React.js, Mui, Responsive Design, Blockchain Integration",
+            route: "/projectcryprovest",
+        },
+        {
+            id: 16,
+            title: "WordPress - Label Design Agency",
+            image: "/image/labledesign.png",
+            category: "WordPress",
+            tech: "WordPress, Elementor, Custom Portfolio, SMTP Integration",
+            route: "/projectlabeldesigns",
+        },
     ];
     const [selectedCategory, setSelectedCategory] = useState('All');
 

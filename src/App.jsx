@@ -210,6 +210,86 @@ const projects = {
       }
     ]
   },
+  "zhconsultancy": {
+    title: "ZH Consultancy",
+    subtitle: "ZH Consultancy is a full-scale business consultancy firm offering customized strategies to help businesses launch, grow, and thrive globally.",
+    stack1: "WordPress Development, Elementor, SMTP Integration, Business Portfolio Section",
+    imagesrc: "/image/ztech.png",
+    imagealt: "ZH Consultancy WordPress Website Screenshot",
+    description: "ZH Consultancy is a business-focused WordPress website built using Elementor with customized design, clear CTA structure, and multilingual SEO setup. The platform highlights core services like business startup support, funding consultation, graphic design, SEO, and website development. A dynamic portfolio section showcases success stories and client projects. An SMTP-integrated contact form ensures secure and reliable client communication. The site is optimized for user experience and lead conversion, making it a valuable digital asset for business growth.",
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://zhconsultancy.com/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  "mariotstore": {
+    title: "Mariot Store",
+    subtitle: "Mariot Store is a high-end WooCommerce platform offering professional-grade kitchen equipment, built for streamlined B2B and B2C ecommerce experiences.",
+    stack1: "WordPress, WooCommerce, Elementor, WhatsApp Integration, Payment Gateway, Product Variations",
+    imagesrc: "/image/mariostore.png",
+    imagealt: "Mariot Store WooCommerce Website Screenshot",
+    description: "Mariot Store is a feature-rich ecommerce platform developed using WordPress and WooCommerce, specifically tailored for commercial kitchen equipment. The site includes advanced catalog management with product filters, price ranges, and category segmentation. Users can view detailed product listings with support for color and size variations. Each product card is enhanced with a floating WhatsApp CTA button for quick inquiry. The site also includes secure payment integration, dynamic cart/checkout system, and customer-friendly policies like easy returns and 24/7 support. Built using Elementor and custom CSS for styling, Mariot Store ensures both a visually engaging and high-conversion shopping experience.",
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://mariotstore.com/", // Replace if needed
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  "cryprovest": {
+    title: "Cryprovest – Crypto Investment Platform",
+    subtitle: "Cryprovest is a secure and modern cryptocurrency trading platform built with React.js and MUI, enabling users to buy, sell, and learn about crypto assets.",
+    stack1: "React.js, MUI, Blockchain Integration, Netlify Hosting",
+    imagesrc: "/image/cryptovest.png",
+    imagealt: "Cryprovest Cryptocurrency Platform Screenshot",
+    description: "Cryprovest is a sleek, React.js-based cryptocurrency trading and learning platform featuring real-time token listings, educational rewards, and security-focused infrastructure. The platform includes live market data, dynamic charts, and user-friendly UI/UX powered by Material UI. Key features include secure vault storage, recurring buy options, FDIC-insured cash balances, and support for 100+ countries. Deployed on Netlify, the platform emphasizes scalability, responsiveness, and a seamless crypto onboarding experience.",
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://crypto-vest-client.netlify.app/", // Replace with your actual Netlify link if different
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+  labeldesigns: {
+    title: "Label Design Agency",
+    subtitle: "A modern branding and label design agency website built with Elementor and WordPress.",
+    stack1: "WordPress, Elementor, Custom Portfolio, SMTP Integration",
+    imagesrc: "/image/labledesign.png",
+    imagealt: "Label Designs WordPress Website Screenshot",
+    description: `KAE Designs is a creative label and branding agency specializing in premium packaging and print-ready designs. 
+Built on WordPress using Elementor, the site features a sleek, modern layout with custom-built sections tailored to 
+highlight design projects, client testimonials, and services. Custom portfolio section with responsive grid and category filters, 
+SMTP-powered contact form for client inquiries, interactive service blocks with hover animations, 
+mobile-friendly, clean, and minimal design.`,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://labeldesignservices.com/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
 
   feals: {
     title: "Feals",
@@ -437,6 +517,50 @@ const App = () => {
             <>
               <Navbar />
               <Portfolioprojects {...projects.hts} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectzhconsultancy"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.zhconsultancy} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectmariotstore"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.mariotstore} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectcryprovest"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.cryprovest} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectlabeldesigns"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.labeldesigns} />
               <ContactFormSection />
               <ContactDetails />
             </>
