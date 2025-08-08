@@ -169,6 +169,14 @@ const Portfolio = () => {
             tech: "WordPress, Elementor, Custom Portfolio, SMTP Integration",
             route: "/projectlabeldesigns",
         },
+        {
+            id: 17,
+            title: "WordPress - webbydesk",
+            image: "/image/webbydesk.png",
+            category: "WordPress",
+            tech: "WordPress, Elementor, Custom Theme, Responsive Design",
+            route: "/projectwebbydesk",
+        },
     ];
     const [selectedCategory, setSelectedCategory] = useState('All');
 

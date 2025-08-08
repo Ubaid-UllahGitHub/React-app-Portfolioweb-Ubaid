@@ -354,6 +354,31 @@ mobile-friendly, clean, and minimal design.`,
       }
     ]
   },
+  webbydesk: {
+    title: "WebbyDesk – Healthcare Marketing Agency",
+    subtitle: "A full-service healthcare marketing agency website for dentists and medical practices, built using WordPress and Elementor.",
+    stack1: "WordPress, Elementor, Custom Features, SMTP Integration, HTML, CSS, JavaScript",
+    imagesrc: "/image/webbydesk.png",
+    imagealt: "WebbyDesk Healthcare Agency WordPress Website Screenshot",
+    description: `WebbyDesk is a digital marketing agency focused on growing dental and medical practices. 
+The website was built with WordPress and Elementor and includes several custom-designed sections such as 
+AI chatbot integration, service highlights, strategy scheduling, and testimonials. 
+Custom contact form with SMTP integration ensures reliable inquiry handling. The layout is fully responsive, 
+SEO-friendly, and optimized for high conversion. Advanced styling using HTML, CSS, and JavaScript was applied 
+for animations, user interaction, and mobile performance.`,
+    links: [
+      {
+        text: "Visit Site",
+        href: "https://www.webbydesk.com/",
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path d="M240-120v-480q0-100 70-170t170-70q100 0 170 70t70 170v168l64-64 56 56-160 160-160-160 56-56 64 64v-168q0-66-47-113t-113-47q-66 0-113 47t-47 113v480h-80Z" />
+          </svg>
+        )
+      }
+    ]
+  },
+
 };
 
 
@@ -561,6 +586,17 @@ const App = () => {
             <>
               <Navbar />
               <Portfolioprojects {...projects.labeldesigns} />
+              <ContactFormSection />
+              <ContactDetails />
+            </>
+          }
+        />
+        <Route
+          path="/projectwebbydesk"
+          element={
+            <>
+              <Navbar />
+              <Portfolioprojects {...projects.webbydesk} />
               <ContactFormSection />
               <ContactDetails />
             </>
